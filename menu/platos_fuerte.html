@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platos Fuertes - Restaurante El Meson </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        article {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Platos Fuertes</h1>
+    <section>
+        <article>
+            <img src="/imagenes/pescado.jpg" alt="Pescado">
+            <h2>Pescado ala diabla</h2>
+            <p><em>Filete jugoso acompapañado.</em></p>
+            <p><strong>Precio:</strong> Q45.00</p>
+        </article>
+        <article>
+            <img src="/imagenes/pollo.jpg" alt="Pollo al Horno">
+            <h2>Pollo al Horno</h2>
+            <p>Pollo asado con especias</p>
+            <p><strong>Precio:</strong> Q50.00</p>
+        </article>
+        <article>   
+            <img src="/imagenes/lasaña.jpg" alt="lasaña">
+            <h2>Lasaña</h2>                                                 
+            <p>Lasaña con especias aromáticas.</p>
+            <p><strong>Precio:</strong> Q42.00</p>
+        </article>
+        <article>
+            <img src="/imagenes/carrne.jpg" alt="carne">
+            <h2>Carne Asada</h2>
+            <p>Carne asada con chorizo.</p>
+            <p><strong>Precio:</strong> Q80</p>
+        </article>
+        <article>
+            <img src="/imagenes/adobado.jpg" alt="Adobado">
+            <h2>Adobado Rojo</h2>
+            <p>Adobado rojo con pico de gallo.</p>
+            <p><strong>Precio:</strong> Q42.00</p>
+        </article>
+    </section>
+    <a href="/index.html">
+        <button>Regresar al Inicio</button>
+</body>
+</html>
