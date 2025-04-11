@@ -41,35 +41,23 @@
 <body>
     <h1>Recetas saladas</h1>
     <div class="grid-container">
-        <article>
-            <h2>Lasaña</h2>
-            <p><strong>Ingredientes:</strong> Placas de lasaña, carne picada, salsa de tomate, cebolla, ajo, queso rallado, bechamel.</p>
-            <p><strong>Pasos:</strong> Cocinar la carne con la cebolla y el ajo, agregar la salsa de tomate, montar la lasaña alternando capas de carne y bechamel, terminar con queso rallado y hornear.</p>
-        </article>
-        
-        <article>
-            <h2>Paella</h2>
-            <p><strong>Ingredientes:</strong> Arroz, azafrán, pollo, mariscos, pimientos, guisantes, caldo de pollo.</p>
-            <p><strong>Pasos:</strong> Sofreír el pollo, agregar los mariscos, añadir el arroz y el azafrán, verter el caldo y cocinar hasta que el arroz esté listo.</p>
-        </article>
-        
-        <article>
-            <h2>Ensalada César</h2>
-            <p><strong>Ingredientes:</strong> Lechuga romana, pollo a la parrilla, crutones, queso parmesano, aderezo César.</p>
-            <p><strong>Pasos:</strong> Mezclar la lechuga con el pollo, agregar los crutones y el queso, y aderezar con la salsa César.</p>
-        </article>
-        
-        <article>
-            <h2>Tacos de Carnitas</h2>
-            <p><strong>Ingredientes:</strong> Tortillas de maíz, carne de cerdo, cebolla, cilantro, limón, salsa.</p>
-            <p><strong>Pasos:</strong> Cocinar la carne de cerdo hasta que esté tierna, desmenuzarla y servir en tortillas con cebolla, cilantro, limón y salsa.</p>
-        </article>
-        
-        <article>
-            <h2>Risotto de Champiñones</h2>
-            <p><strong>Ingredientes:</strong> Arroz arborio, champiñones, cebolla, ajo, caldo de pollo, parmesano.</p>
-            <p><strong>Pasos:</strong> Sofreír la cebolla y el ajo, añadir los champiñones, incorporar el arroz y añadir el caldo poco a poco, cocinar hasta que el arroz esté cremoso, añadir parmesano al final.</p>
-        </article>
+        <?php
+        // Leer el archivo recetas-saladas.txt y mostrar las recetas
+        $file = 'recetas-saladas.txt';
+        if (file_exists($file)) {
+            $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            foreach ($lines as $line) {
+                list($title, $ingredients, $steps) = explode('|', $line);
+                echo "<article>
+                        <h2>$title</h2>
+                        <p><strong>Ingredientes:</strong> $ingredients</p>
+                        <p><strong>Pasos:</strong> $steps</p>
+                    </article>";
+            }
+        } else {
+            echo "<p>No se encontró el archivo de recetas.</p>";
+        }
+        ?>
     </div>
     
     <a href="/index.html">

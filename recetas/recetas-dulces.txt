@@ -1,0 +1,6 @@
+Tiramisú|Bizcochos, mascarpone, café, cacao.|Preparar el café, mezclar mascarpone y montar.
+Flan de Caramelo|Leche, azúcar, huevos, esencia de vainilla, caramelo.|Preparar el caramelo, batir los huevos con la leche y el azúcar, verter la mezcla en un molde con caramelo, y cocinar al baño maría.
+Cheesecake de Fresa|Galletas, mantequilla, queso crema, azúcar, fresas, gelatina.|Triturar las galletas y mezclarlas con mantequilla, hacer una base en un molde, batir el queso crema con el azúcar, verter sobre la base, enfriar y decorar con fresas.
+Brownies de Chocolate|Chocolate, mantequilla, azúcar, huevos, harina, nueces (opcional).|Derretir el chocolate con la mantequilla, añadir el azúcar y los huevos, mezclar con la harina y las nueces, verter en un molde y hornear.
+Helado de Vainilla|Leche, crema de leche, azúcar, yemas de huevo, esencia de vainilla.|Calentar la leche con la crema de leche, batir las yemas con el azúcar, mezclar con la leche caliente, añadir la vainilla y congelar.
+Crème Brûlée|Crema de leche, yemas de huevo, azúcar, vainilla, azúcar para caramelizar.|Calentar la crema de leche con la vainilla, batir las yemas con el azúcar, mezclar con la crema caliente, hornear al baño maría y caramelizar el azúcar en la superficie.

@@ -1,0 +1,5 @@
+Lasaña|Placas de lasaña, carne picada, salsa de tomate, cebolla, ajo, queso rallado, bechamel.|Cocinar la carne con la cebolla y el ajo, agregar la salsa de tomate, montar la lasaña alternando capas de carne y bechamel, terminar con queso rallado y hornear.
+Paella|Arroz, azafrán, pollo, mariscos, pimientos, guisantes, caldo de pollo.|Sofreír el pollo, agregar los mariscos, añadir el arroz y el azafrán, verter el caldo y cocinar hasta que el arroz esté listo.
+Ensalada César|Lechuga romana, pollo a la parrilla, crutones, queso parmesano, aderezo César.|Mezclar la lechuga con el pollo, agregar los crutones y el queso, y aderezar con la salsa César.
+Tacos de Carnitas|Tortillas de maíz, carne de cerdo, cebolla, cilantro, limón, salsa.|Cocinar la carne de cerdo hasta que esté tierna, desmenuzarla y servir en tortillas con cebolla, cilantro, limón y salsa.
+Risotto de Champiñones|Arroz arborio, champiñones, cebolla, ajo, caldo de pollo, parmesano.|Sofreír la cebolla y el ajo, añadir los champiñones, incorporar el arroz y añadir el caldo poco a poco, cocinar hasta que el arroz esté cremoso, añadir parmesano al final.

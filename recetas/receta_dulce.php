@@ -41,41 +41,23 @@
 <body>
     <h1>Recetas Dulces</h1>
     <div class="grid-container">
-        <article>
-            <h2>Tiramisú</h2>
-            <p><strong>Ingredientes:</strong> Bizcochos, mascarpone, café, cacao.</p>
-            <p><strong>Pasos:</strong> Preparar el café, mezclar mascarpone y montar.</p>
-        </article>
-
-        <article>
-            <h2>Flan de Caramelo</h2>
-            <p><strong>Ingredientes:</strong> Leche, azúcar, huevos, esencia de vainilla, caramelo.</p>
-            <p><strong>Pasos:</strong> Preparar el caramelo, batir los huevos con la leche y el azúcar, verter la mezcla en un molde con caramelo, y cocinar al baño maría.</p>
-        </article>
-        
-        <article>
-            <h2>Cheesecake de Fresa</h2>
-            <p><strong>Ingredientes:</strong> Galletas, mantequilla, queso crema, azúcar, fresas, gelatina.</p>
-            <p><strong>Pasos:</strong> Triturar las galletas y mezclarlas con mantequilla, hacer una base en un molde, batir el queso crema con el azúcar, verter sobre la base, enfriar y decorar con fresas.</p>
-        </article>
-        
-        <article>
-            <h2>Brownies de Chocolate</h2>
-            <p><strong>Ingredientes:</strong> Chocolate, mantequilla, azúcar, huevos, harina, nueces (opcional).</p>
-            <p><strong>Pasos:</strong> Derretir el chocolate con la mantequilla, añadir el azúcar y los huevos, mezclar con la harina y las nueces, verter en un molde y hornear.</p>
-        </article>
-        
-        <article>
-            <h2>Helado de Vainilla</h2>
-            <p><strong>Ingredientes:</strong> Leche, crema de leche, azúcar, yemas de huevo, esencia de vainilla.</p>
-            <p><strong>Pasos:</strong> Calentar la leche con la crema de leche, batir las yemas con el azúcar, mezclar con la leche caliente, añadir la vainilla y congelar.</p>
-        </article>
-        
-        <article>
-            <h2>Crème Brûlée</h2>
-            <p><strong>Ingredientes:</strong> Crema de leche, yemas de huevo, azúcar, vainilla, azúcar para caramelizar.</p>
-            <p><strong>Pasos:</strong> Calentar la crema de leche con la vainilla, batir las yemas con el azúcar, mezclar con la crema caliente, hornear al baño maría y caramelizar el azúcar en la superficie.</p>
-        </article>
+        <?php
+        // Leer el archivo recetas-dulces.txt
+        $file = 'recetas-dulces.txt';
+        if (file_exists($file)) {
+            $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            foreach ($lines as $line) {
+                list($title, $ingredients, $steps) = explode('|', $line);
+                echo "<article>
+                        <h2>$title</h2>
+                        <p><strong>Ingredientes:</strong> $ingredients</p>
+                        <p><strong>Pasos:</strong> $steps</p>
+                    </article>";
+            }
+        } else {
+            echo "<p>No se encontró el archivo de recetas dulces.</p>";
+        }
+        ?>
     </div>
     
     <a href="/index.html">
