@@ -1,5 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (empty($_POST['nombre'])){
+        echo "<div class='alert alert-danger'>El campo nombre es obligatorio.</div>";
+        exit;   
+    }
     $nombre = htmlspecialchars($_POST['nombre']);
     $telefono = htmlspecialchars($_POST['telefono']);
     $fecha = htmlspecialchars($_POST['fecha']);
@@ -52,4 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<a href="/index.html">
+        <button>Inicio</button>
+    </a>
 </html>
