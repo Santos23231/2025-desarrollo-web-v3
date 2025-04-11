@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos del formulario
     $nombre = htmlspecialchars($_POST['nombre']);
     $telefono = htmlspecialchars($_POST['telefono']);
     $fecha = htmlspecialchars($_POST['fecha']);
@@ -9,27 +8,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reserva = "Nombre: $nombre\nTeléfono: $telefono\nFecha: $fecha\nHora: $hora\nDescripción: $descripcion\n---\n";
     $archivo = 'reservaciones.txt';
     file_put_contents($archivo, $reserva, FILE_APPEND);
-    echo "Reserva guardada exitosamente.";
+    echo "<div class='alert alert-success'>Reserva guardada exitosamente.</div>";
 } else {
-    echo "Método no permitido.";
+    echo "<div class='alert alert-danger'>Método no permitido.</div>";
 }
 ?>
 
-<form action="procesar_reserva.php" method="POST">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-    
-    <label for="telefono">Teléfono:</label>
-    <input type="text" id="telefono" name="telefono" required>
-    
-    <label for="fecha">Fecha:</label>
-    <input type="date" id="fecha" name="fecha" required>
-    
-    <label for="hora">Hora:</label>
-    <input type="time" id="hora" name="hora" required>
-    
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" required></textarea>
-    
-    <button type="submit">Reservar</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Reservar</h1>
+        <form action="procesar_reserva.php" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="hora" class="form-label">Hora:</label>
+                <input type="time" id="hora" name="hora" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Reservar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
